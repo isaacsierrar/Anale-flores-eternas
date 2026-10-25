@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FloraEterna · Flores que no se marchitan</title>
+<meta name="description" content="Ramos de rosas de satín hechas a mano, con perlas y mariposas doradas. Pedidos personalizados con mensaje y entrega a domicilio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#inicio">Anale flores eternas</a>
+  <nav aria-label="Principal">
+    <a href="#catalogo">Catálogo</a>
+    <a href="#por-que">Por qué eternas</a>
+    <a href="#pedido" class="pill">Mi pedido <span id="cuenta">0</span></a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-txt">
+    <h1>Flores que no se marchitan</h1>
+    <p>Ramos de rosas de satín hechos a mano, con perlas, mariposas y el mensaje que usted quiera. Escoja uno del catálogo o cuéntenos cómo lo imagina y lo hacemos a su gusto.</p>
+    <div class="cta">
+      <a class="btn" href="#catalogo">Ver catálogo</a>
+      <a class="btn ghost" href="#pedido">Pedir un arreglo personalizado</a>
+    </div>
+  </div>
+  <div class="hero-img"><img src="img/ramo-rojo-luces.jpg" alt="Ramo de rosas rojas de satín con luces" width="720" height="900"></div>
+</section>
+
+<ul class="confia"><li>Entrega a domicilio</li><li>Tarjeta con su mensaje</li><li>Nequi, Daviplata, transferencia o tarjeta</li><li>Hecho a su gusto</li></ul>
+<section class="sec" id="como"><h2>Pedir es fácil</h2>
+<ol class="pasos"><li><b>Escoja</b><span>Escoja un ramo del catálogo o cuéntenos cómo lo imagina.</span></li><li><b>Personalice</b><span>Agregue su mensaje, la fecha y la dirección.</span></li><li><b>Confirme</b><span>Le llega a WhatsApp el pedido y acordamos el anticipo.</span></li></ol></section>
+<section id="catalogo" class="sec">
+  <h2>Catálogo</h2>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+  <div class="grid" id="grid"></div>
+  <p class="nota" id="aviso" role="status" aria-live="polite"></p>
+</section>
+
+<section id="por-que" class="sec alt">
+  <h2>Por qué elegir flores eternas</h2>
+  <div class="trio">
+    <article><h3>No se marchitan</h3><p>Son rosas de satín hechas a mano: no necesitan agua ni cuidados diarios y se conservan por años.</p></article>
+    <article><h3>Un regalo que se queda</h3><p>Cumpleaños, aniversarios, Día de la Madre o San Valentín: el ramo sigue en casa mucho después de la fecha.</p></article>
+    <article><h3>Hecho a su manera</h3><p>Escoja colores, cantidad de rosas y adornos como mariposas, corona o luces. Agregamos una tarjeta con su mensaje.</p></article>
+  </div>
+</section>
+
+<section id="pedido" class="sec">
+  <h2>Haga su pedido</h2>
+  <p class="sub">Arme su lista, complete los datos y envíenos el pedido por WhatsApp. Allí confirmamos el valor y el anticipo.</p>
+  <div class="pedido">
+    <div class="lista">
+      <h3>Productos escogidos</h3>
+      <ul id="items"></ul>
+      <p class="total">Total estimado: <strong id="total">$ 0</strong></p>
+    </div>
+    <form id="form" novalidate>
+<fieldset><legend>1 · Sus datos</legend>
+<label>Su nombre *<input name="nombre" autocomplete="name"><small class="err"></small></label>
+      <label>Celular *<input name="celular" inputmode="numeric" maxlength="10" placeholder="3001234567" autocomplete="tel"><small class="err"></small></label>
+      </fieldset><fieldset><legend>2 · Su arreglo</legend>
+<label>Cuéntenos cómo lo quiere (colores, flores, tamaño)<textarea name="detalle" rows="3" maxlength="200"></textarea><small class="err"></small></label>
+      <label>Mensaje de la tarjeta<input name="tarjeta" maxlength="120"><small class="err"></small></label>
+      </fieldset><fieldset><legend>3 · Entrega y pago</legend>
+<div class="dos">
+        <label>Fecha de entrega *<input type="date" name="fecha"><small class="err"></small></label>
+        <label>Forma de pago *
+          <select name="pago"><option value="">Escoja una opción</option><option>Efectivo</option><option>Nequi</option><option>Daviplata</option><option>Transferencia</option><option>Tarjeta</option></select><small class="err"></small></label>
+      </div>
+      <label>Dirección de entrega * <span class="hint">(o escriba Tienda si recoge)</span><input name="direccion" autocomplete="street-address"><small class="err"></small></label>
+      </fieldset>
+<button class="btn" type="submit">Enviar pedido por WhatsApp</button>
+      <button class="btn ghost" type="button" id="limpiar">Limpiar campos</button>
+      <p class="ok" id="ok" role="status" hidden>Listo: se abrió WhatsApp con su pedido. Envíe el mensaje y lo confirmamos con usted.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec alt">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cuánto duran las flores eternas?</summary><p>No se marchitan. Con buen cuidado conservan su forma y su color por años.</p></details>
+  <details><summary>¿Cómo las cuido?</summary><p>Manténgalas lejos de la humedad y del sol directo, y no las moje. Basta con sacudirles el polvo suavemente.</p></details>
+  <details><summary>¿Cómo puedo pagar?</summary><p>Efectivo, Nequi, Daviplata, transferencia o tarjeta. En los pedidos personalizados dejamos un anticipo y el saldo se paga al entregar.</p></details>
+  <details><summary>¿Puedo escoger los colores?</summary><p>Sí. Los ramos del catálogo se pueden hacer en otros colores, con más o menos rosas y con los adornos que usted prefiera.</p></details>
+  <details><summary>¿Puedo agregar un mensaje?</summary><p>Sí, hasta 120 caracteres en una tarjeta que va con el arreglo.</p></details>
+</section>
+
+<section class="sec">
+  <h2>Comparta FloraEterna</h2>
+  <p class="sub">Copie un texto, péguelo en sus estados o en Instagram y recuerde agregar una foto del producto.</p>
+  <div class="textos" id="textos"></div>
+</section>
+</main>
+
+<dialog id="vista"><button type="button" class="x" aria-label="Cerrar foto">×</button><img alt=""></dialog>
+<footer>
+  <p>FloraEterna · Ramos de rosas eternas para regalar y recordar</p>
+  <a href="#" id="wa-pie">Escríbanos por WhatsApp</a>
+</footer>
+
+<div class="barra" id="barra" hidden><span><strong id="b-n">0</strong> en su pedido · <strong id="b-t">$ 0</strong></span><a class="btn" href="#pedido">Hacer pedido</a></div>
+<a class="wa-flot" id="wa-flot" href="#" aria-label="Escribirnos por WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-5 4V4a1 1 0 0 1 0-1z"/></svg></a>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
